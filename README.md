@@ -9,7 +9,7 @@ Capture website screenshots
  |_|     |_| |_|  \___| |_|\_\  \___| |_| 
 ```
 
-## Clone
+## Install
 
 To use the Flicker script, follow these steps:
 
