@@ -1,7 +1,9 @@
-#!/bin/bash                                             
+#!/bin/bash
+
 # Author: Haitham Aouati
 # GitHub: github.com/haithamaouati
-                                                        # Text format
+
+# Text format
 normal="\e[0m"
 bold="\e[1m"
 faint="\e[2m"
