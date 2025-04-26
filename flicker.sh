@@ -8,15 +8,21 @@ normal="\e[0m"
 bold="\e[1m"
 faint="\e[2m"
 underlined="\e[4m"
+error_color="\e[1;31m"
 
-# Check dependencies
-if ! command -v figlet &>/dev/null || ! command -v curl &>/dev/null; then
-    echo -e "Error: figlet and curl are required but not installed. Please install them and try again."
-    exit 1
-fi
+# Dependencies check
+dependencies=(figlet)
+for cmd in "${dependencies[@]}"; do
+    if ! command -v "$cmd" &>/dev/null; then
+        echo -e "${error_color}Error:${normal} '$cmd' is required but not installed. Please install it and try again." >&2
+        exit 1
+    fi
+done
+
+# Clear the screen
+clear
 
 print_banner() {
-    clear
     figlet -f standard "Flicker"
     echo -e "Capture website screenshots\n"
     echo -e " Author: Haitham Aouati"
