@@ -11,7 +11,7 @@ underlined="\e[4m"
 error_color="\e[1;31m"
 
 # Dependencies check
-dependencies=(figlet)
+dependencies=(figlet curl)
 for cmd in "${dependencies[@]}"; do
     if ! command -v "$cmd" &>/dev/null; then
         echo -e "${error_color}Error:${normal} '$cmd' is required but not installed. Please install it and try again." >&2
