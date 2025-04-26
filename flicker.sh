@@ -29,11 +29,12 @@ print_banner() {
     echo -e " GitHub: ${underlined}github.com/haithamaouati${normal}\n"
 }
 
+print_banner
+
 API_KEY="a268d21237914062817aa7469e1f468b"
 API_URL="https://screenshot.abstractapi.com/v1/"
 
 print_help() {
-    print_banner
     echo "Usage: $0 -u <url>"
     echo ""
     echo "Options:"
@@ -43,7 +44,6 @@ print_help() {
 }
 
 take_screenshot() {
-    print_banner
     local target_url="$1"
     if [[ -z "$target_url" ]]; then
         echo -e "[!] URL is required. Use -u or --url to specify it.\n"
