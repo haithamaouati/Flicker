@@ -61,4 +61,4 @@ Made with :coffee: by **Haitham Aouati**
 
 ## License
 
-Flicker is licensed under [Unlicense license](LICENSE)
+Flicker is licensed under [WTFPL license](LICENSE)
